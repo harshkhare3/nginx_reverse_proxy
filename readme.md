@@ -66,9 +66,9 @@ To add a website in this fashion 'example.com/site1', perform the following step
    2. Go to 'Proxy Host', and click on 'Add Proxy Host'.
 
    3. Fill in the domain name (e.g.example.com) and Forward Hostname/IP. The forwarded Hostname/IP will be the same as your domain name (e.g. example.com). Use http mode and forward it to port 80.
-
+  
+  ![location_example](https://github.com/harshkhare3/nginx_reverse_proxy/blob/master/location_example1.png?raw=true)
    4. Navigate to Custom Locations and add a new location (e.g. /site1). Write the name of the docker container of the website that is to be accessed (e.g. site1_app_1) in Forward Hostname/IP field. Use http mode and forward it to port 80.
-
    5. Then, go to the SSL section and add a pre-existing wildcard SSL cert to this proxy host. Select 'Force SSL' and 'HTTP/2 Support' options as well.
 
 And that's it. You are done!
@@ -77,4 +77,4 @@ And that's it. You are done!
 
 Harsh Khare - harshkhare3@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/harshkhare3/nginx_reverse_proxy](hhttps://github.com/harshkhare3/nginx_reverse_proxy)
