@@ -1,0 +1,15 @@
+version: "3.5"
+services:
+  app:
+    image: nginx
+    volumes:
+      - .:/usr/share/nginx/html
+    ports:
+      - "80"
+    networks:
+      - proxy
+
+networks: 
+  proxy:
+    external: 
+      name: nginxproxymanager_default
