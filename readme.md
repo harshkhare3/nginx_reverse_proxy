@@ -46,9 +46,13 @@ Perform the following steps to setup a server to have its own subdomain (e.g. si
 
    3. Fill in the domain name (e.g. site1.example.com) and Forward Hostname/IP name. Use http mode and forward it to port that you have exposed.
 
-   4. Then, go to the SSL section and add a pre-existing wildcard SSL cert to this proxy host. Select 'Force SSL' and 'HTTP/2 Support' options as well.
+  For e.g.
+  
+  ![image](https://github.com/harshkhare3/nginx_reverse_proxy/blob/master/subdomain_example.png?raw=true)
 
-   5. Now, go to your DNS settings and add a **CNAME** record for your website.
+  4. Then, go to the SSL section and add a pre-existing wildcard SSL cert to this proxy host. Select 'Force SSL' and 'HTTP/2 Support' options as well.
+
+  5. Now, go to your DNS settings and add a **CNAME** record for your website.
 
 And that's it. You are done!
 
