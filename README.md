@@ -49,9 +49,20 @@ Perform the following steps to setup a server to have its own subdomain (e.g. si
 
 NOTE - To find the name of your website's docker container, run '`docker ps`' command on your local machine.
 
+```console
+CONTAINER ID   IMAGE                             COMMAND                  CREATED       STATUS                 PORTS                                            NAMES
+86cc3968a57f   nginx                             "/docker-entrypoint.…"   6 days ago    Up 6 days              0.0.0.0:49189->80/tcp                            site3_app_1
+dcb38bf0ded1   jc21/nginx-proxy-manager:latest   "/init"                  11 days ago   Up 11 days (healthy)   0.0.0.0:80-81->80-81/tcp, 0.0.0.0:443->443/tcp   nginxproxymanager_app_1
+b2e868db6e52   jc21/mariadb-aria:latest          "/scripts/run.sh"        11 days ago   Up 11 days             3306/tcp                                         nginxproxymanager_db_1
+c526d3879085   nginx                             "/docker-entrypoint.…"   13 days ago   Up 13 days             0.0.0.0:49188->80/tcp                            site2_app_1
+a6d598e58edd   nginx                             "/docker-entrypoint.…"   2 weeks ago   Up 2 weeks             0.0.0.0:49187->80/tcp                            site1_app_1
+```
+
+In the example above, the container name is under the `NAMES` column called `site1_app_1`.
+
   For e.g.
   
-  ![image](https://github.com/harshkhare3/nginx_reverse_proxy/blob/master/subdomain_example.png?raw=true)
+  ![image](images/subdomain_example.png)
 
   4. Then, go to the SSL section and add a pre-existing wildcard SSL cert to this proxy host. Select 'Force SSL' and 'HTTP/2 Support' options as well.
 
@@ -69,11 +80,11 @@ To add a website in this fashion 'example.com/site1', perform the following step
 
    3. Fill in the domain name (e.g.example.com) and Forward Hostname/IP. The forwarded Hostname/IP will be the same as your domain name (e.g. example.com). Use http mode and forward it to port 80.
   
-  ![location_example](https://github.com/harshkhare3/nginx_reverse_proxy/blob/master/location_example.png?raw=true)
+  ![location_example](images/location_example.png)
 
    4. Navigate to Custom Locations and add a new location (e.g. /site1). Write the name of the docker container of the website that is to be accessed (e.g. site3_app_1) in Forward Hostname/IP field. Use http mode and forward it to port 80.
 
-   ![location_example2](https://github.com/harshkhare3/nginx_reverse_proxy/blob/master/location_example2.png?raw=true)
+   ![location_example2](images/location_example2.png)
    5. Then, go to the SSL section and add a pre-existing wildcard SSL cert to this proxy host. Select 'Force SSL' and 'HTTP/2 Support' options as well.
 
 And that's it. You are done!
