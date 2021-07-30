@@ -93,4 +93,4 @@ And that's it. You are done!
 
 Harsh Khare - harshkhare3@gmail.com
 
-Project Link: [https://github.com/harshkhare3/nginx_reverse_proxy](hhttps://github.com/harshkhare3/nginx_reverse_proxy)
+Project Link: [https://github.com/harshkhare3/nginx_reverse_proxy](https://github.com/harshkhare3/nginx_reverse_proxy)
