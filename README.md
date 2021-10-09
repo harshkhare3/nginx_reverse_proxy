@@ -25,8 +25,8 @@ services:
       
 networks: 
   proxy:
-    external: 
-      name: nginxproxymanager_default
+    external: true
+    name: nginxproxymanager_default
 
 ```
 
